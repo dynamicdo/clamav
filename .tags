@@ -1,0 +1,116 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+language	/private/var/www/packages/clamav/.travis.yml	/^language: php$/;"	function	line:1
+before_install	/private/var/www/packages/clamav/.travis.yml	/^before_install:$/;"	function	line:3
+install	/private/var/www/packages/clamav/.travis.yml	/^install:$/;"	function	line:9
+php	/private/var/www/packages/clamav/.travis.yml	/^php:$/;"	function	line:12
+script	/private/var/www/packages/clamav/.travis.yml	/^script:$/;"	function	line:16
+name	/private/var/www/packages/clamav/composer.json	/^  "name": "dynamicdo\/clamav",$/;"	function	line:2
+description	/private/var/www/packages/clamav/composer.json	/^  "description": "A PHP client library for ClamAV clamd daemon",$/;"	function	line:3
+license	/private/var/www/packages/clamav/composer.json	/^  "license": "MIT",$/;"	function	line:4
+authors	/private/var/www/packages/clamav/composer.json	/^  "authors": [$/;"	function	line:5
+name	/private/var/www/packages/clamav/composer.json	/^      "name": "Rick Burgess",$/;"	function	line:7
+email	/private/var/www/packages/clamav/composer.json	/^      "email": "nodefortytwo@gmail.com"$/;"	function	line:8
+name	/private/var/www/packages/clamav/composer.json	/^      "name": "Jonjo McKay",$/;"	function	line:11
+email	/private/var/www/packages/clamav/composer.json	/^      "email": "jonjo@jonjomckay.com"$/;"	function	line:12
+autoload	/private/var/www/packages/clamav/composer.json	/^  "autoload": {$/;"	function	line:15
+psr-4	/private/var/www/packages/clamav/composer.json	/^    "psr-4": {$/;"	function	line:16
+Dynamicdo\\ClamAv\\	/private/var/www/packages/clamav/composer.json	/^      "Dynamicdo\\\\ClamAv\\\\": "src"$/;"	function	line:17
+autoload-dev	/private/var/www/packages/clamav/composer.json	/^  "autoload-dev": {$/;"	function	line:20
+psr-4	/private/var/www/packages/clamav/composer.json	/^    "psr-4": {$/;"	function	line:21
+Dynamicdo\\ClamAv\\Tests\\	/private/var/www/packages/clamav/composer.json	/^      "Dynamicdo\\\\ClamAv\\\\Tests\\\\": "tests\/"$/;"	function	line:22
+require	/private/var/www/packages/clamav/composer.json	/^  "require": {$/;"	function	line:25
+php	/private/var/www/packages/clamav/composer.json	/^    "php": ">=7.0",$/;"	function	line:26
+clue/socket-raw	/private/var/www/packages/clamav/composer.json	/^    "clue\/socket-raw": "^1.2"$/;"	function	line:27
+require-dev	/private/var/www/packages/clamav/composer.json	/^  "require-dev": {$/;"	function	line:29
+phpunit/phpunit	/private/var/www/packages/clamav/composer.json	/^    "phpunit\/phpunit": "^4.8",$/;"	function	line:30
+mikey179/vfsStream	/private/var/www/packages/clamav/composer.json	/^    "mikey179\/vfsStream": "^1.6"$/;"	function	line:31
+Installation	/private/var/www/packages/clamav/README.md	/^## Installation$/;"	function	line:8
+Credit	/private/var/www/packages/clamav/README.md	/^#Credit$/;"	function	line:20
+Client	/private/var/www/packages/clamav/src/Quahog/Client.php	/^class Client$/;"	class	line:13
+_socket	/private/var/www/packages/clamav/src/Quahog/Client.php	/^    private $_socket;$/;"	variable	line:20
+_inSession	/private/var/www/packages/clamav/src/Quahog/Client.php	/^    private $_inSession = false;$/;"	variable	line:23
+_inSession	/private/var/www/packages/clamav/src/Quahog/Client.php	/^    private $_inSession = false;$/;"	variable	line:23
+__construct	/private/var/www/packages/clamav/src/Quahog/Client.php	/^    public function __construct(Socket $socket)$/;"	function	line:30
+_socket	/private/var/www/packages/clamav/src/Quahog/Client.php	/^        $this->_socket = $socket;$/;"	variable	line:32
+ping	/private/var/www/packages/clamav/src/Quahog/Client.php	/^    public function ping()$/;"	function	line:41
+version	/private/var/www/packages/clamav/src/Quahog/Client.php	/^    public function version()$/;"	function	line:58
+stats	/private/var/www/packages/clamav/src/Quahog/Client.php	/^    public function stats()$/;"	function	line:70
+reload	/private/var/www/packages/clamav/src/Quahog/Client.php	/^    public function reload()$/;"	function	line:82
+shutdown	/private/var/www/packages/clamav/src/Quahog/Client.php	/^    public function shutdown()$/;"	function	line:94
+disconnect	/private/var/www/packages/clamav/src/Quahog/Client.php	/^    public function disconnect()$/;"	function	line:106
+scanFile	/private/var/www/packages/clamav/src/Quahog/Client.php	/^    public function scanFile($file)$/;"	function	line:118
+response	/private/var/www/packages/clamav/src/Quahog/Client.php	/^        $response = $this->_receiveResponse();$/;"	variable	line:122
+multiscanFile	/private/var/www/packages/clamav/src/Quahog/Client.php	/^    public function multiscanFile($file)$/;"	function	line:134
+response	/private/var/www/packages/clamav/src/Quahog/Client.php	/^        $response = $this->_receiveResponse();$/;"	variable	line:138
+contScan	/private/var/www/packages/clamav/src/Quahog/Client.php	/^    public function contScan($file)$/;"	function	line:150
+response	/private/var/www/packages/clamav/src/Quahog/Client.php	/^        $response = $this->_receiveResponse();$/;"	variable	line:154
+scanLocalFile	/private/var/www/packages/clamav/src/Quahog/Client.php	/^    public function scanLocalFile($file, $maxChunkSize = 1024)$/;"	function	line:167
+maxChunkSize	/private/var/www/packages/clamav/src/Quahog/Client.php	/^    public function scanLocalFile($file, $maxChunkSize = 1024)$/;"	variable	line:167
+scanResourceStream	/private/var/www/packages/clamav/src/Quahog/Client.php	/^    public function scanResourceStream($stream, $maxChunkSize = 1024)$/;"	function	line:181
+maxChunkSize	/private/var/www/packages/clamav/src/Quahog/Client.php	/^    public function scanResourceStream($stream, $maxChunkSize = 1024)$/;"	variable	line:181
+size	/private/var/www/packages/clamav/src/Quahog/Client.php	/^            $size = pack('N', strlen($chunk));$/;"	variable	line:190
+response	/private/var/www/packages/clamav/src/Quahog/Client.php	/^        $response = $this->_receiveResponse();$/;"	variable	line:197
+scanStream	/private/var/www/packages/clamav/src/Quahog/Client.php	/^    public function scanStream($stream, $maxChunkSize = 1024)$/;"	function	line:210
+maxChunkSize	/private/var/www/packages/clamav/src/Quahog/Client.php	/^    public function scanStream($stream, $maxChunkSize = 1024)$/;"	variable	line:210
+chunksLeft	/private/var/www/packages/clamav/src/Quahog/Client.php	/^        $chunksLeft = $stream;$/;"	variable	line:214
+chunk	/private/var/www/packages/clamav/src/Quahog/Client.php	/^            $chunk = substr($chunksLeft, 0, $maxChunkSize);$/;"	variable	line:217
+chunksLeft	/private/var/www/packages/clamav/src/Quahog/Client.php	/^            $chunksLeft = substr($chunksLeft, $maxChunkSize);$/;"	variable	line:218
+size	/private/var/www/packages/clamav/src/Quahog/Client.php	/^            $size = pack('N', strlen($chunk));$/;"	variable	line:220
+response	/private/var/www/packages/clamav/src/Quahog/Client.php	/^        $response = $this->_receiveResponse();$/;"	variable	line:228
+startSession	/private/var/www/packages/clamav/src/Quahog/Client.php	/^    public function startSession()$/;"	function	line:233
+_inSession	/private/var/www/packages/clamav/src/Quahog/Client.php	/^        $this->_inSession = true;$/;"	variable	line:235
+endSession	/private/var/www/packages/clamav/src/Quahog/Client.php	/^    public function endSession()$/;"	function	line:240
+_inSession	/private/var/www/packages/clamav/src/Quahog/Client.php	/^        $this->_inSession = false;$/;"	variable	line:244
+_sendCommand	/private/var/www/packages/clamav/src/Quahog/Client.php	/^    private function _sendCommand($command)$/;"	function	line:252
+_receiveResponse	/private/var/www/packages/clamav/src/Quahog/Client.php	/^    private function _receiveResponse()$/;"	function	line:262
+result	/private/var/www/packages/clamav/src/Quahog/Client.php	/^        $result = $this->_socket->read(4096);$/;"	variable	line:264
+_closeConnection	/private/var/www/packages/clamav/src/Quahog/Client.php	/^    private function _closeConnection()$/;"	function	line:280
+_parseResponse	/private/var/www/packages/clamav/src/Quahog/Client.php	/^    private function _parseResponse($response)$/;"	function	line:298
+splitResponse	/private/var/www/packages/clamav/src/Quahog/Client.php	/^        $splitResponse = explode(': ', $response);$/;"	variable	line:300
+idReturn	/private/var/www/packages/clamav/src/Quahog/Client.php	/^        $idReturn = [];$/;"	variable	line:302
+filename	/private/var/www/packages/clamav/src/Quahog/Client.php	/^            $filename = $splitResponse[0];$/;"	variable	line:304
+message	/private/var/www/packages/clamav/src/Quahog/Client.php	/^            $message = $splitResponse[1];$/;"	variable	line:305
+idReturn	/private/var/www/packages/clamav/src/Quahog/Client.php	/^            $idReturn = ['id' => $splitResponse[0]];$/;"	variable	line:308
+filename	/private/var/www/packages/clamav/src/Quahog/Client.php	/^            $filename = $splitResponse[1];$/;"	variable	line:309
+message	/private/var/www/packages/clamav/src/Quahog/Client.php	/^            $message = $splitResponse[2];$/;"	variable	line:310
+parts	/private/var/www/packages/clamav/src/Quahog/Client.php	/^            $parts = explode(' ', $message);$/;"	variable	line:316
+status	/private/var/www/packages/clamav/src/Quahog/Client.php	/^            $status = array_pop($parts);$/;"	variable	line:317
+reason	/private/var/www/packages/clamav/src/Quahog/Client.php	/^            $reason = implode(' ', $parts);$/;"	variable	line:318
+ConnectionException	/private/var/www/packages/clamav/src/Quahog/Exception/ConnectionException.php	/^class ConnectionException extends \\Exception$/;"	class	line:9
+file_get_contents	/private/var/www/packages/clamav/tests/function_overrides.php	/^function file_get_contents($file) {$/;"	function	line:3
+QuahogTest	/private/var/www/packages/clamav/tests/QuahogTest.php	/^class QuahogTest extends \\PHPUnit_Framework_TestCase$/;"	class	line:11
+socket	/private/var/www/packages/clamav/tests/QuahogTest.php	/^    private $socket;$/;"	variable	line:16
+quahog	/private/var/www/packages/clamav/tests/QuahogTest.php	/^    private $quahog;$/;"	variable	line:21
+root	/private/var/www/packages/clamav/tests/QuahogTest.php	/^    private $root;$/;"	variable	line:26
+setUp	/private/var/www/packages/clamav/tests/QuahogTest.php	/^    public function setUp()$/;"	function	line:28
+socket	/private/var/www/packages/clamav/tests/QuahogTest.php	/^        $this->socket = $this->getMockBuilder(Socket::class)->disableOriginalConstructor()->getMock();$/;"	variable	line:30
+quahog	/private/var/www/packages/clamav/tests/QuahogTest.php	/^        $this->quahog = new Client($this->socket);$/;"	variable	line:31
+root	/private/var/www/packages/clamav/tests/QuahogTest.php	/^        $this->root = vfsStream::setup('tmp');$/;"	variable	line:32
+testPingOK	/private/var/www/packages/clamav/tests/QuahogTest.php	/^    public function testPingOK()$/;"	function	line:35
+result	/private/var/www/packages/clamav/tests/QuahogTest.php	/^        $result = $this->quahog->ping();$/;"	variable	line:39
+testPingFail	/private/var/www/packages/clamav/tests/QuahogTest.php	/^    public function testPingFail()$/;"	function	line:44
+result	/private/var/www/packages/clamav/tests/QuahogTest.php	/^        $result = $this->quahog->ping();$/;"	variable	line:50
+testVersion	/private/var/www/packages/clamav/tests/QuahogTest.php	/^    public function testVersion()$/;"	function	line:55
+result	/private/var/www/packages/clamav/tests/QuahogTest.php	/^        $result = $this->quahog->version();$/;"	variable	line:59
+testStats	/private/var/www/packages/clamav/tests/QuahogTest.php	/^    public function testStats()$/;"	function	line:64
+result	/private/var/www/packages/clamav/tests/QuahogTest.php	/^        $result = $this->quahog->stats();$/;"	variable	line:68
+testReload	/private/var/www/packages/clamav/tests/QuahogTest.php	/^    public function testReload()$/;"	function	line:73
+result	/private/var/www/packages/clamav/tests/QuahogTest.php	/^        $result = $this->quahog->reload();$/;"	variable	line:77
+testScanFile	/private/var/www/packages/clamav/tests/QuahogTest.php	/^    public function testScanFile()$/;"	function	line:82
+result	/private/var/www/packages/clamav/tests/QuahogTest.php	/^        $result = $this->quahog->scanFile('\/tmp\/EICAR');$/;"	variable	line:88
+testMultiscanFile	/private/var/www/packages/clamav/tests/QuahogTest.php	/^    public function testMultiscanFile()$/;"	function	line:96
+result	/private/var/www/packages/clamav/tests/QuahogTest.php	/^        $result = $this->quahog->multiscanFile('\/tmp\/quahog');$/;"	variable	line:102
+testContScan	/private/var/www/packages/clamav/tests/QuahogTest.php	/^    public function testContScan()$/;"	function	line:108
+result	/private/var/www/packages/clamav/tests/QuahogTest.php	/^        $result = $this->quahog->contScan('\/tmp\/quahog');$/;"	variable	line:114
+testScanLocalFile	/private/var/www/packages/clamav/tests/QuahogTest.php	/^    public function testScanLocalFile()$/;"	function	line:122
+file	/private/var/www/packages/clamav/tests/QuahogTest.php	/^        $file = vfsStream::newFile('EICAR')$/;"	variable	line:124
+result	/private/var/www/packages/clamav/tests/QuahogTest.php	/^        $result = $this->quahog->scanLocalFile($file->url());$/;"	variable	line:132
+testScanStream	/private/var/www/packages/clamav/tests/QuahogTest.php	/^    public function testScanStream()$/;"	function	line:140
+result	/private/var/www/packages/clamav/tests/QuahogTest.php	/^        $result = $this->quahog->scanStream('stream');$/;"	variable	line:146
+testShutdown	/private/var/www/packages/clamav/tests/QuahogTest.php	/^    public function testShutdown()$/;"	function	line:154
+result	/private/var/www/packages/clamav/tests/QuahogTest.php	/^        $result = $this->quahog->shutdown();$/;"	variable	line:156
