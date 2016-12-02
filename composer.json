@@ -1,8 +1,12 @@
 {
-  "name": "blurgroup/quahog",
+  "name": "dynamicdo/clamav",
   "description": "A PHP client library for ClamAV clamd daemon",
   "license": "MIT",
   "authors": [
+     {
+      "name": "Rick Burgess",
+      "email": "nodefortytwo@gmail.com"
+    },
     {
       "name": "Jonjo McKay",
       "email": "jonjo@jonjomckay.com"
@@ -10,16 +14,16 @@
   ],
   "autoload": {
     "psr-4": {
-      "Xenolope\\Quahog\\": "src/Quahog"
+      "Dynamicdo\\ClamAv\\": "src"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Xenolope\\Quahog\\Tests\\": "tests/"
+      "Dynamicdo\\ClamAv\\Tests\\": "tests/"
     }
   },
   "require": {
-    "php": ">=5.6",
+    "php": ">=7.0",
     "clue/socket-raw": "^1.2"
   },
   "require-dev": {
