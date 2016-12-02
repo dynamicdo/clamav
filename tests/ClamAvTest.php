@@ -1,14 +1,14 @@
 <?php
 
-namespace Xenolope\Quahog\Tests;
+namespace Dynamicdo\ClamAv\Tests;
 
-use Socket\Raw\Socket;
-use Xenolope\Quahog\Client;
+use Dynamicdo\ClamAv\Client;
+use Dynamicdo\ClamAv\Exception\ConnectionException;
 use org\bovigo\vfs\vfsStream;
 use org\bovigo\vfs\vfsStreamDirectory;
-use Xenolope\Quahog\Exception\ConnectionException;
+use Socket\Raw\Socket;
 
-class QuahogTest extends \PHPUnit_Framework_TestCase
+class ClamAvTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @var \Socket\Raw\Socket|\PHPUnit_Framework_MockObject_MockObject
@@ -29,7 +29,7 @@ class QuahogTest extends \PHPUnit_Framework_TestCase
     {
         $this->socket = $this->getMockBuilder(Socket::class)->disableOriginalConstructor()->getMock();
         $this->quahog = new Client($this->socket);
-        $this->root = vfsStream::setup('tmp');
+        $this->root   = vfsStream::setup('tmp');
     }
 
     public function testPingOK()
@@ -88,7 +88,7 @@ class QuahogTest extends \PHPUnit_Framework_TestCase
         $result = $this->quahog->scanFile('/tmp/EICAR');
 
         $this->assertSame(
-            array('filename' => '/tmp/EICAR', 'reason' => 'Eicar-Test-Signature', 'status' => 'FOUND'),
+            ['filename' => '/tmp/EICAR', 'reason' => 'Eicar-Test-Signature', 'status' => 'FOUND'],
             $result
         );
     }
@@ -126,7 +126,7 @@ class QuahogTest extends \PHPUnit_Framework_TestCase
             ->at($this->root);
 
         $this->socket->expects($this->any())->method('read')->will(
-            $this->returnValue($file->url() . ': Eicar-Test-Signature FOUND')
+            $this->returnValue($file->url().': Eicar-Test-Signature FOUND')
         );
 
         $result = $this->quahog->scanLocalFile($file->url());

@@ -1,18 +1,17 @@
 <?php
 
-namespace Xenolope\Quahog;
+namespace Dynamicdo\ClamAv;
 
+use Dynamicdo\ClamAv\Exception\ConnectionException;
 use InvalidArgumentException;
-use Xenolope\Quahog\Exception\ConnectionException;
 use Socket\Raw\Socket;
 
 /**
- * Class Client
- * @package Quahog
+ * Class Client.
  */
 class Client
 {
-    const RESULT_OK = 'OK';
+    const RESULT_OK    = 'OK';
     const RESULT_FOUND = 'FOUND';
     const RESULT_ERROR = 'ERROR';
 
@@ -36,6 +35,7 @@ class Client
      * Ping clamd to see if we get a response.
      *
      * @throws ConnectionException
+     *
      * @return bool
      */
     public function ping()
@@ -48,7 +48,6 @@ class Client
 
         throw new ConnectionException('Could not ping clamd');
     }
-
 
     /**
      * Retrieve the running ClamAV version information.
@@ -111,13 +110,13 @@ class Client
     /**
      * Scan a single file.
      *
-     * @param string $file The location of the file to scan.
+     * @param string $file The location of the file to scan
      *
      * @return string
      */
     public function scanFile($file)
     {
-        $this->_sendCommand('SCAN ' . $file);
+        $this->_sendCommand('SCAN '.$file);
 
         $response = $this->_receiveResponse();
 
@@ -127,13 +126,13 @@ class Client
     /**
      * Scan a file or directory recursively using multiple threads.
      *
-     * @param string $file The location of the file or directory to scan.
+     * @param string $file The location of the file or directory to scan
      *
      * @return string
      */
     public function multiscanFile($file)
     {
-        $this->_sendCommand('MULTISCAN ' . $file);
+        $this->_sendCommand('MULTISCAN '.$file);
 
         $response = $this->_receiveResponse();
 
@@ -143,13 +142,13 @@ class Client
     /**
      * Scan a file or directory recursively.
      *
-     * @param string $file The location of the file or directory to scan.
+     * @param string $file The location of the file or directory to scan
      *
      * @return string
      */
     public function contScan($file)
     {
-        $this->_sendCommand('CONTSCAN ' . $file);
+        $this->_sendCommand('CONTSCAN '.$file);
 
         $response = $this->_receiveResponse();
 
@@ -159,8 +158,8 @@ class Client
     /**
      * Scan a local file via a stream.
      *
-     * @param string $file The location of the file to scan.
-     * @param int    $maxChunkSize The maximum chunk size in bytes to send to clamd at a time.
+     * @param string $file         The location of the file to scan
+     * @param int    $maxChunkSize The maximum chunk size in bytes to send to clamd at a time
      *
      * @return string
      */
@@ -172,10 +171,11 @@ class Client
     /**
      * Scan a stream.
      *
-     * @param resource $stream A file stream in string form.
-     * @param int      $maxChunkSize The maximum chunk size in bytes to send to clamd at a time.
+     * @param resource $stream       A file stream in string form
+     * @param int      $maxChunkSize The maximum chunk size in bytes to send to clamd at a time
      *
      * @return string
+     *
      * @throws InvalidArgumentException
      */
     public function scanResourceStream($stream, $maxChunkSize = 1024)
@@ -184,7 +184,7 @@ class Client
             throw new InvalidArgumentException('Passed stream is not a resource!');
         }
 
-        $this->_sendCommand("INSTREAM");
+        $this->_sendCommand('INSTREAM');
 
         while ($chunk = fread($stream, $maxChunkSize)) {
             $size = pack('N', strlen($chunk));
@@ -202,19 +202,19 @@ class Client
     /**
      * Scan a stream.
      *
-     * @param string $stream A file stream in string form.
-     * @param int    $maxChunkSize The maximum chunk size in bytes to send to clamd at a time.
+     * @param string $stream       A file stream in string form
+     * @param int    $maxChunkSize The maximum chunk size in bytes to send to clamd at a time
      *
      * @return string
      */
     public function scanStream($stream, $maxChunkSize = 1024)
     {
-        $this->_sendCommand("INSTREAM");
+        $this->_sendCommand('INSTREAM');
 
         $chunksLeft = $stream;
 
         while (strlen($chunksLeft) > 0) {
-            $chunk = substr($chunksLeft, 0, $maxChunkSize);
+            $chunk      = substr($chunksLeft, 0, $maxChunkSize);
             $chunksLeft = substr($chunksLeft, $maxChunkSize);
 
             $size = pack('N', strlen($chunk));
@@ -275,7 +275,7 @@ class Client
      *
      * @return bool
      *
-     * @throws ConnectionException  If the socket fails to close.
+     * @throws ConnectionException If the socket fails to close
      */
     private function _closeConnection()
     {
@@ -302,18 +302,17 @@ class Client
         $idReturn = [];
         if (!$this->_inSession) {
             $filename = $splitResponse[0];
-            $message = $splitResponse[1];
-        }
-        else {
+            $message  = $splitResponse[1];
+        } else {
             $idReturn = ['id' => $splitResponse[0]];
             $filename = $splitResponse[1];
-            $message = $splitResponse[2];
+            $message  = $splitResponse[2];
         }
 
         if ($message === self::RESULT_OK) {
             return $idReturn + ['filename' => $filename, 'reason' => null, 'status' => self::RESULT_OK];
         } else {
-            $parts = explode(' ', $message);
+            $parts  = explode(' ', $message);
             $status = array_pop($parts);
             $reason = implode(' ', $parts);
 
